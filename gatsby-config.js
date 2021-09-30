@@ -20,6 +20,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
