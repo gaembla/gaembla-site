@@ -14,3 +14,4 @@ jobs:
         with:
           # Pavels personal token
           access-token: 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
+          deploy-branch: gh-pages
