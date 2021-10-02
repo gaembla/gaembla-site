@@ -271,7 +271,7 @@ const IndexPage = () => {
               <div className="header-logo">
                 <img src={HeaderLogo} alt="" />
               </div>
-              <nav className="header-nav">
+              {/* <nav className="header-nav">
                 <ul>
                   <li>
                     <a href="#">Home</a>
@@ -289,7 +289,7 @@ const IndexPage = () => {
                     <a href="#">Contacts</a>
                   </li>
                 </ul>
-              </nav>
+              </nav> */}
               <div className="btn-menu js-btn-menu">
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>
