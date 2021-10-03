@@ -1,5 +1,5 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React, { useRef, useEffect} from "react"
+import {Link} from 'react-scroll'
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -32,19 +32,23 @@ function createGoHireJobs() {
 }
 
 const IndexPage = () => {
+
+  useEffect(() => {
+    window.dispatchEvent( new Event('load') );
+  });
+
   return (
     <>
       <Helmet title="Gaembla.com">
         <script
           src="https://widget.gohire.io/widget/OP6XcrtX"
-          type="text/javascript"
         />
       </Helmet>
       <div className="main-wrapper">
         {/* BEGIN CONTENT */}
         <main className="content">
           {/* BEGIN MAIN BLOCK */}
-          <section className="main-block">
+          <section id="home" className="main-block">
             <div className="section-gradient" />
             <div className="wrapper">
               <img src={MainBlockDecor} className="main-block__decor" alt="" />
@@ -69,7 +73,7 @@ const IndexPage = () => {
           </section>
           {/* MAIN BLOCK EOF   */}
           {/* BEGIN INFO BLOCK */}
-          <section className="info-block">
+          <section id="info" className="info-block">
             <div className="wrapper">
               <img src={InfoBlockDecor} className="info-block__decor" alt="" />
               <div className="info-block__items">
@@ -124,7 +128,7 @@ const IndexPage = () => {
           </section>
           {/* MAIN ABOUT EOF   */}
           {/* BEGIN MAIN TEAM */}
-          <section className="main-team">
+          <section id="careers" className="main-team">
             <div className="section-gradient" />
             <div className="section-gradient section-gradient2" />
             <div className="wrapper">
@@ -165,41 +169,7 @@ const IndexPage = () => {
                       <br /> and introduce yourself by dropping a message here.
                     </p>
                     <div className="main-team__info-interested-items">
-                      {/* <div dangerouslySetInnerHTML={createGoHireJobs()} /> */}
-
-                      {/* <div className="main-team__info-interested-item">
-                        <div className="main-team__info-interested-item-text">
-                          <span className="title4">
-                            Senior Software Data Engineer
-                          </span>
-                          <p>Kyiv, Ukraine</p>
-                        </div>
-                        <a href="careers.gaembla.com" className="btn btn-white">
-                          Apply
-                        </a>
-                      </div>
-                      <div className="main-team__info-interested-item">
-                        <div className="main-team__info-interested-item-text">
-                          <span className="title4">
-                            Senior Software Data Engineer
-                          </span>
-                          <p>Kyiv, Ukraine</p>
-                        </div>
-                        <a href="careers.gaembla.com" className="btn btn-white">
-                          Apply
-                        </a>
-                      </div>
-                      <div className="main-team__info-interested-item">
-                        <div className="main-team__info-interested-item-text">
-                          <span className="title4">
-                            Senior Software Data Engineer
-                          </span>
-                          <p>Kyiv, Ukraine</p>
-                        </div>
-                        <a href="careers.gaembla.com" className="btn btn-white">
-                          Apply
-                        </a>
-                      </div> */}
+                      {<div dangerouslySetInnerHTML={createGoHireJobs()} />}
                     </div>
                   </div>
                 </div>
@@ -222,7 +192,7 @@ const IndexPage = () => {
           </section>
           {/* MAIN TEAM EOF   */}
           {/* BEGIN MAIN CONTACTS */}
-          <section className="main-contacts">
+          <section id="contacts" className="main-contacts">
             <div className="section-gradient" />
             <div className="wrapper">
               <div className="main-contacts__content">
@@ -274,19 +244,19 @@ const IndexPage = () => {
               <nav className="header-nav">
                 <ul>
                   <li>
-                    <a href="#">Home</a>
+                    <Link activeClass="active" to="home" spy={true} smooth={true}>Home</Link>
                   </li>
                   <li>
-                    <a href="#">About Us</a>
+                  <Link  to="info" spy={true} smooth={true}>About Us</Link>
                   </li>
                   <li>
-                    <a href="#">Careers</a>
+                  <Link  to="careers" spy={true} smooth={true}>Careers</Link>
                   </li>
+                  {/*<li>
+                  <Link  to="blog" spy={true} smooth={true}>Blog</Link>
+                  </li>*/}
                   <li>
-                    <a href="#">Blog</a>
-                  </li>
-                  <li>
-                    <a href="#">Contacts</a>
+                  <Link  to="contacts" spy={true} smooth={true}>Contacts</Link>
                   </li>
                 </ul>
               </nav>
