@@ -35,7 +35,9 @@ const IndexPage = () => {
 
   useEffect(() => {
     window.dispatchEvent( new Event('load') );
-  });
+  },
+  [],
+  );
 
   return (
     <>
