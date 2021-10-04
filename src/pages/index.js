@@ -243,7 +243,7 @@ const IndexPage = () => {
               <div className="header-logo">
                 <img src={HeaderLogo} alt="" />
               </div>
-              {/* <nav className="header-nav">
+              {<nav className="header-nav">
                 <ul>
                   <li>
                     <Link activeClass="active" to="home" spy={true} smooth={true}>Home</Link>
@@ -261,7 +261,7 @@ const IndexPage = () => {
                   <Link  to="contacts" spy={true} smooth={true}>Contacts</Link>
                   </li>
                 </ul>
-              </nav> */}
+              </nav>}
               <div className="btn-menu js-btn-menu">
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>
