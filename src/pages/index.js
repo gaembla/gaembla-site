@@ -107,7 +107,7 @@ const IndexPage = () => {
               <div className="main-about__block">
                 <h2 className="title2">About Us</h2>
                 <p>
-                  We are GAEMBLA, a project that was company created by a group
+                  We are GAEMBLA, a company that was created by a group
                   of experts with vast knowledge and love for everything that is
                   Gambling and Entertainment. Coming from a long history of
                   international casino operations and software development along
