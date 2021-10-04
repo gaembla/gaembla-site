@@ -153,7 +153,7 @@ const IndexPage = () => {
                       href="https://careers.gaembla.com"
                       className="btn btn-white"
                     >
-                      see all vacancies
+                      see all openings
                     </a>
                   </div>
                   <div className="main-team__info-interested">
