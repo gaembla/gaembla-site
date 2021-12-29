@@ -1,4 +1,4 @@
-import React, { useRef, useEffect} from "react"
+import React, { useRef, useEffect, useState, useCallback } from "react"
 import {Link} from 'react-scroll'
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -32,12 +32,22 @@ function createGoHireJobs() {
 }
 
 const IndexPage = () => {
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     window.dispatchEvent( new Event('load') );
   },
   [],
   );
+
+  const handleToggleMenu = useCallback(() => {
+    setIsActive(!isActive);
+    if (!isActive) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isActive])
 
   return (
     <>
@@ -243,26 +253,26 @@ const IndexPage = () => {
               <div className="header-logo">
                 <img src={HeaderLogo} alt="" />
               </div>
-              {<nav className="header-nav">
+              <nav className={`header-nav ${isActive && 'active'}`}>
                 <ul>
                   <li>
-                    <Link activeClass="active" to="home" spy={true} smooth={true}>Home</Link>
+                    <Link onClick={handleToggleMenu} activeClass="active" to="home" spy={true} smooth={true}>Home</Link>
                   </li>
                   <li>
-                  <Link  to="info" spy={true} smooth={true}>About Us</Link>
+                  <Link onClick={handleToggleMenu}  to="info" spy={true} smooth={true}>About Us</Link>
                   </li>
                   <li>
-                  <Link  to="careers" spy={true} smooth={true}>Careers</Link>
+                  <Link onClick={handleToggleMenu}  to="careers" spy={true} smooth={true}>Careers</Link>
                   </li>
                   {/*<li>
                   <Link  to="blog" spy={true} smooth={true}>Blog</Link>
                   </li>*/}
                   <li>
-                  <Link  to="contacts" spy={true} smooth={true}>Contacts</Link>
+                  <Link onClick={handleToggleMenu} to="contacts" spy={true} smooth={true}>Contacts</Link>
                   </li>
                 </ul>
-              </nav>}
-              <div className="btn-menu js-btn-menu">
+              </nav>
+              <div className={`btn-menu js-btn-menu ${isActive && 'active'}`} onClick={handleToggleMenu}>
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>
