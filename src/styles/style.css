@@ -385,17 +385,14 @@ header {
   display: none;
   height: 2em;
   width: 2.6rem;
-  /*height: 1.6rem;*/
-  /*width: 1.6rem;*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 111;
   position: relative;
 }
 
 .btn-menu span {
-  background-color: rgba(68, 66, 113, 0.9);
+  background-color: rgba(42, 40, 91, 0.3);
   display: block;
-  /*height: 0.1rem;*/
   height: 0.2rem;
   left: calc(50% - 11px);
   position: absolute;
@@ -456,7 +453,7 @@ header {
 
 @media screen and (max-width: 991px) {
   .header-nav ul li a {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     cursor: pointer;
   }
   .header-nav ul li {
@@ -530,6 +527,12 @@ header {
   }
   .header {
     padding: 1.5rem 0;
+    position: fixed;
+    background-color: #eeeefb;
+    z-index: 9999999;
+  }
+  .content {
+    margin-top: 8rem;
   }
 }
 
