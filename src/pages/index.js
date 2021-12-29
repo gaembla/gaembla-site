@@ -1,9 +1,6 @@
-import React, { useRef, useEffect, useState, useCallback } from "react"
+import React, { useEffect, useState, useCallback } from "react"
 import {Link} from 'react-scroll'
-import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
 import { Helmet } from "react-helmet"
 
 import "../styles/style.css"
