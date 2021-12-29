@@ -383,8 +383,10 @@ header {
   color: rgba(68, 66, 113, 0.9);
   cursor: pointer;
   display: none;
-  height: 1.6rem;
-  width: 1.6rem;
+  height: 2em;
+  width: 2.6rem;
+  /*height: 1.6rem;*/
+  /*width: 1.6rem;*/
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 111;
   position: relative;
@@ -393,7 +395,8 @@ header {
 .btn-menu span {
   background-color: rgba(68, 66, 113, 0.9);
   display: block;
-  height: 0.1rem;
+  /*height: 0.1rem;*/
+  height: 0.2rem;
   left: calc(50% - 11px);
   position: absolute;
   -ms-transform-origin: center;
@@ -411,20 +414,20 @@ header {
   -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  width: 1.6rem;
+  width: 2.6rem;
   border-radius: 4px;
 }
 
 .btn-menu span:nth-child(1) {
-  top: calc(50% - 0.5rem);
+  top: calc(50% - 1rem);
 }
 
 .btn-menu span:nth-child(2) {
-  top: calc(50% - 0.1rem);
+  top: calc(50% - 0.2rem);
 }
 
 .btn-menu span:nth-child(3) {
-  top: calc(50% + 0.3rem);
+  top: calc(50% + 0.6rem);
 }
 
 .btn-menu.active {
@@ -436,9 +439,9 @@ header {
 }
 
 .btn-menu.active span:nth-child(1) {
-  -webkit-transform: translateY(0.5rem) rotate(45deg);
-  -ms-transform: translateY(0.5rem) rotate(45deg);
-  transform: translateY(0.5rem) rotate(45deg);
+  -webkit-transform: translateY(0.4rem) rotate(45deg);
+  -ms-transform: translateY(0.4rem) rotate(45deg);
+  transform: translateY(0.4rem) rotate(45deg);
 }
 
 .btn-menu.active span:nth-child(2) {
@@ -446,14 +449,15 @@ header {
 }
 
 .btn-menu.active span:nth-child(3) {
-  -webkit-transform: translateY(-0.3rem) rotate(-45deg);
-  -ms-transform: translateY(-0.3rem) rotate(-45deg);
-  transform: translateY(-0.3rem) rotate(-45deg);
+  -webkit-transform: translateY(-1.2rem) rotate(-45deg);
+  -ms-transform: translateY(-1.2rem) rotate(-45deg);
+  transform: translateY(-1.2rem) rotate(-45deg);
 }
 
 @media screen and (max-width: 991px) {
   .header-nav ul li a {
     font-size: 1.4rem;
+    cursor: pointer;
   }
   .header-nav ul li {
     margin-left: 3rem;
@@ -1400,8 +1404,8 @@ p {
 
 @media screen and (max-width: 767px) {
   .wrapper {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
   p {
     font-size: 1.4rem;
